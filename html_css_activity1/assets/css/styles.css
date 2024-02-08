@@ -1,0 +1,76 @@
+body, html {
+    margin: 0px;
+    height: 100%;
+}
+
+main {
+    height: 100%;
+}
+
+#section-rotate {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#section-rotate .wrapper { 
+    width:200px;
+    height: 200px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.circles-first-row{
+    width:100%;
+    height: 50%;
+    display: flex;
+}
+
+.blue{
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.red{
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.circles-second-row{
+    width:100%;
+    height: 50%;
+    display:flex;
+}
+
+.yellow{
+    width: 50%;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.green{
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
