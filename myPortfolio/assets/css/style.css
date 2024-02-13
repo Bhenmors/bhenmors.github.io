@@ -1,0 +1,172 @@
+body, html{
+    max-width: max-content;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+nav {
+    width: 1200px;
+    height: 50px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content:space-between;
+}
+
+.logo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h4{
+    color : #fff;
+}
+.navigation{
+    width : 20%;
+    height : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation button{
+    width: 80%;
+    height: 60%;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    border-radius: 8px;
+}
+
+.navigation button:hover{
+    cursor: pointer;
+}
+
+
+main{
+    width: 100%;
+    background-color: #fff;
+    
+}
+
+.banner{
+    width:100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f3f4;
+}
+
+.profile{
+    width: 150px;
+    height: 150px;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+}
+
+.name{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name div:first-child{
+    width: 100%;
+    text-align: center;
+}
+
+.name div:first-child h2{
+    margin: 0;
+    padding: 0;
+
+}
+
+.name div:last-child{
+    width: 100%;    
+    text-align: center;
+}
+
+
+.description{
+    width: 618px;
+    height: 120px;
+    text-align: center;
+}
+
+
+.contact-button{
+    margin-top: 20px;
+}
+.contact-button button{
+    width: 150px;
+    height: 40px;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    border-radius: 8px;
+}
+
+.contact-button button:hover{
+    cursor: pointer;
+}
+
+.about-us{
+    width:100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.carousel{
+    width:100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f3f4;
+}
+
+.item-list{
+    width:100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.subscribe{
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f3f4;
+}
+
+footer{
+    width: 1200px;
+    height: 50px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
