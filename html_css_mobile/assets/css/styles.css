@@ -4,7 +4,7 @@ body, html {
 
     height: 100%;
 
-    background-color: red;
+    background-color: yellow;
 }
 
 main {
@@ -12,7 +12,7 @@ main {
     height: 100%;
     margin: 0px auto;
 
-    /* background-color: green; */
+    background-color: red;
 }
 
 .section-cover {
