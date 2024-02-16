@@ -55,7 +55,7 @@ main{
 
 .banner{
     width:100%;
-    height: 500px;
+    height:450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,15 +101,16 @@ main{
 
 
 .description{
+    margin-top: 20px;
     width: 618px;
-    height: 120px;
+    height: 100px;
     text-align: center;
 }
 
 
-.contact-button{
-    margin-top: 20px;
-}
+/* .contact-button{
+    margin-top: 10px;
+} */
 .contact-button button{
     width: 150px;
     height: 40px;
@@ -127,7 +128,7 @@ main{
 
 .about-us{
     width:100%;
-    height: 450px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,7 +161,7 @@ main{
 
 .about-me-carousel div{
     width: 350px;
-    height: 200px;
+    height: 120px;
     border-radius: 15px;
     border-bottom: 5px solid #c20000;
     box-shadow: 0 0 3px #ccc;
@@ -170,7 +171,7 @@ main{
 
 .carousel{
     width:100%;
-    height:550px;
+    height:500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,7 +181,7 @@ main{
 
 .work-experience{
     width: 1024px;
-    height:30%;
+    height:20%;
     text-align: center;
 }
 
@@ -239,7 +240,7 @@ main{
     background-color: #fff;
 }
 .grid-container {
-    width: 90%;
+    width: 1150px;
     height: 90%;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -254,11 +255,16 @@ main{
     border-radius: 15px;
     border-bottom: 5px solid #c20000;
     box-shadow: 0 0 3px #ccc;
-    background-image: url("../img/web1.jpg");
-    background-size: cover;
+    /* background-image: url("../img/web1.jpg");
+    background-size: cover; */
     
   }
 
+  .grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 
 
