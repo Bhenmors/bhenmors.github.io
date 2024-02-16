@@ -13,7 +13,7 @@ nav {
 }
 
 .logo {
-    width: 30%;
+    width: 17%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ nav {
     color : #fff;
 }
 .navigation{
-    width : 20%;
+    width : 40%;
     height : 100%;
     display: flex;
     justify-content: center;
@@ -32,14 +32,14 @@ nav {
 }
 
 .navigation button{
-    width: 80%;
+    width: 32.5%;
     height: 60%;
     background-color: #c20000;
     color: #fff;
     font-size : 15px;
     font-weight : bolder;
     border-color: #c20000;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 .navigation button:hover{
@@ -233,7 +233,7 @@ main{
 
 .portfolio{
     width:100%;
-    height: 600px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,8 +262,9 @@ main{
 
   .grid-item img{
     width: 100%;
-    height: 90%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 15px;
   }
 
 
@@ -274,4 +275,38 @@ footer{
     background-color: #2e2e2e;
     display: flex;
     justify-content:space-between;
+}
+
+.Allrights {
+    width: 16%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Allrights h4{
+    color : #fff;
+}
+.email{
+    width : 15%;
+    height : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email button{
+    width: 90%;
+    height: 60%;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    /* border-radius: 8px; */
+}
+
+.email button:hover{
+    cursor: pointer;
 }
