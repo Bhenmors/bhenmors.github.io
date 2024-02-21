@@ -13,6 +13,7 @@ nav {
     background-color: #2e2e2e;
     display: flex;
     justify-content:space-between;
+    align-items: center;
 }
 
 .logo {
@@ -27,11 +28,41 @@ nav {
     color : #fff;
 }
 .navigation{
-    width : 70%;
-    height : 100%;
+    width : 47%;
+    height : 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.navigation li{
+    float: left;
+    
+}
+
+.navigation ul{
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c20000;
+}
+
+.navigation ul a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+.navigation ul a:hover{
+    /* color: #c20000; */
+    background-color: #f32b2b;
+    /* background-color: #949494; */
+
 }
 
 .navigation button{
