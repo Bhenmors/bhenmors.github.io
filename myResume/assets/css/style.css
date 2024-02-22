@@ -1,0 +1,613 @@
+body, html{
+    max-width: max-content;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Header */
+
+nav {
+    width: 1200px;
+    height: 50px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h4{
+    color : #fff;
+}
+.navigation{
+    width : 47%;
+    height : 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation li{
+    float: left;
+    
+}
+
+.navigation ul{
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c20000;
+}
+
+.navigation ul a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+.navigation ul a:hover{
+    /* color: #c20000; */
+    background-color: #f32b2b;
+    /* background-color: #949494; */
+
+}
+
+.navigation button{
+    width: 19.8%;
+    height: 60%;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    /* border-radius: 8px; */
+}
+
+.navigation button:hover{
+    cursor: pointer;
+}
+
+
+/* Main Div */
+
+main{
+    width: 100%;
+    background-color: #fff;
+    
+}
+
+/* Main About Me */
+.banner{
+    width:100%;
+    height:450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f3f4;
+}
+
+.profile{
+    width: 150px;
+    height: 150px;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+}
+
+.name{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name div:first-child{
+    width: 100%;
+    text-align: center;
+}
+
+.name div:first-child h2{
+    margin: 0;
+    padding: 0;
+
+}
+
+.name div:last-child{
+    width: 100%;    
+    text-align: center;
+}
+
+
+.description{
+    margin-top: 20px;
+    width: 618px;
+    height: 100px;
+    text-align: center;
+}
+
+
+/* .contact-button{
+    margin-top: 10px;
+} */
+.contact-button button{
+    width: 150px;
+    height: 40px;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    border-radius: 8px;
+}
+
+.contact-button button:hover{
+    cursor: pointer;
+}
+
+/* About me */
+
+.about-us{
+    width:100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.about-me{
+    width: 1024px;
+    height:30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-me h2{
+    margin: 0;
+    padding: 0;
+}
+
+.about-me-carousel{
+    width: 1200px;
+    height:70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-me-carousel div{
+    width: 350px;
+    height: 120px;
+    border-radius: 15px;
+    border-bottom: 5px solid #c20000;
+    box-shadow: 0 0 3px #ccc;
+    padding: 20px;
+}
+
+.about-me-carousel a{
+    text-decoration: none;
+    color: #c20000;
+    font-weight: bolder;
+}
+/* Work & Experience */
+
+.carousel{
+    width:100%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f4;
+}
+
+.work-experience{
+    width: 1024px;
+    height:20%;
+    text-align: center;
+}
+
+.work-experience-carousel{
+    width: 1200px;
+    height: 70%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.work-experience-carousel div{
+    width: 340px;
+    height: 275px;
+    background-color: #fff;
+    border-radius: 15px;
+    border-bottom: 5px solid #c20000;
+    box-shadow: 0 0 3px #ccc;
+    padding: 20px;
+}
+
+.work-experience-carousel div h4,p{
+    margin:0;
+    padding:0;
+}
+
+.work-experience-carousel hr{
+    margin-top: 20px;
+    color:  #ccc;
+}
+
+.work-experience-carousel button{
+    background-color: #c20000;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #c20000;
+    border-radius: 5px;
+}
+
+
+/* Portfolio */
+
+.Portfolio-title{
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.portfolio{
+    width:100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.grid-container {
+    width: 1150px;
+    height: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+    border-bottom: 5px solid #c20000;
+    box-shadow: 0 0 3px #ccc;
+    /* background-image: url("../img/web1.jpg");
+    background-size: cover; */
+    
+  }
+
+  .grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+/* Contact Page */
+
+.Contactme{
+    width: 1200px;
+    height: 500px;
+    background-color: #f1f3f4;
+    display: flex;
+
+}
+.contactdesc{
+    width: 60%;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactdescmessage{
+
+    width: 80%;
+    height: 50%;
+
+}
+.contactform{
+    width:40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cform{
+    width: 80%;
+    height: 75%;
+    background-color: #fff;
+    box-shadow: 0 0 9px #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-submit{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items:center;
+    justify-content:baseline;
+}
+
+.cform-name{
+    width:90%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.cform-name div{ 
+    width: 48%;
+    height: 100%;
+}
+
+
+.cform-name-textarea{
+    width:90%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+
+.cform-name-textarea div{ 
+    width: 48%;
+    height:75%;
+    
+}
+
+.inputname{
+    width: 95%;
+    height: 80%;
+}
+
+.inputlastname{
+    width: 95%;
+    height: 80%;
+}
+
+.cform-email{
+    margin-top: 2%;
+    width:90%;
+    height: 7%;
+
+}
+
+.cform-email-textarea{
+    width:90%;
+    height: 12%;
+
+}
+
+.inputemail{
+    width: 98%;
+    height: 80%;
+}
+
+.cform-message{
+    margin-top: 2%;
+    width:90%;
+    height: 7%;
+}
+
+.cform-message-textarea{
+    width:90%;
+    height: 25%;
+}
+
+.cform-message-textarea textarea{
+    width: 98%;
+    height: 100%;
+}
+.contact-submit button{
+    margin-left: 4.5%;
+    margin-top: 8%;
+    width: 32.5%;
+    height: 60%;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    /* border-radius: 8px; */
+}
+
+.contact-submit button:hover{
+    cursor: pointer;
+}
+
+/* Review Section */
+
+.review{
+    width:100%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f4;
+}
+
+.review-div{
+    width: 1024px;
+    height:20%;
+    text-align: center;
+}
+
+.review-carousel{
+    width: 1200px;
+    height: 70%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.review-box{
+    width: 340px;
+    height: 275px;
+    background-color: #fff;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    border-bottom: 5px solid #c20000;
+    box-shadow: 0 0 3px #ccc;
+    padding: 20px;
+}
+
+.review-box div:first-child{
+    width:100%;
+    height: 70%;
+}
+
+.review-box div:first-child img{
+    width:40%;
+}
+
+.review-box div:first-child p{
+    margin-top: 10px;
+}
+
+.review-box div:last-child{
+    width:100%;
+    height: 30%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.review-box div:last-child div:first-child{
+    width:30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.review-box div:last-child div:first-child img{
+    width:80%;
+    height: 80%;
+    border-radius: 50%;
+
+}
+.review-box div:last-child div:last-child{
+    width:70%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.review-box div:last-child div:last-child h3,p{
+    margin:0;
+    padding:0;
+}
+
+
+/* .review-carousel div h4,p{
+    margin:0;
+    padding:0;
+}
+
+.review-carousel hr{
+    margin-top: 20px;
+    color:  #ccc;
+}
+
+.review-carousel button{
+    background-color: #c20000;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #c20000;
+    border-radius: 5px;
+} */
+
+/* Footer */
+
+footer{
+    width: 1200px;
+    height: 50px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content:space-between;
+}
+
+.Allrights {
+    width: 16%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Allrights h4{
+    color : #fff;
+}
+.email{
+    width : 15%;
+    height : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email button{
+    width: 90%;
+    height: 60%;
+    background-color: #c20000;
+    color: #fff;
+    font-size : 15px;
+    font-weight : bolder;
+    border-color: #c20000;
+    /* border-radius: 8px; */
+}
+
+.email button:hover{
+    cursor: pointer;
+}
