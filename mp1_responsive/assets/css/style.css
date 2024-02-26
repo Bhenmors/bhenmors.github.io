@@ -1,0 +1,56 @@
+body, html{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+.bggrey{
+    background-color: #f1f1f1;
+}
+
+.shadowbox{
+    border: 0;
+    box-shadow: 0 4px 4px -4px #cecece inset;
+}
+
+
+.profilepicture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+}
+
+.btn-danger{
+    background-color: #c20000 !important;
+}
+
+.btn-danger:hover{
+    background-color: #ec3b3b !important;
+}
+
+.navcolor{
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+.about-me-carousel{
+    border-radius: 15px;
+    border-bottom: 5px solid #c20000;
+    box-shadow: 0 0 3px #ccc;
+    padding: 20px;
+}
+
+.gap-class {
+    gap: 15px
+}
+
+.text-c20{
+    background-color: #c20000;
+    width:100px;
+    height:25px;
+    color: #fff;
+    text-align: center;
+}
+
+.portfoliowidth{
+    width:30%;
+}
