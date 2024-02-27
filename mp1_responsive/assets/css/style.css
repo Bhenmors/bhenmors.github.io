@@ -21,6 +21,12 @@ body, html{
 
 .btn-danger{
     background-color: #c20000 !important;
+    vertical-align: middle;
+}
+
+.btn-primary{
+    background-color: #c20000 !important;
+    border: 1px solid #c20000 !important;
 }
 
 .btn-danger:hover{
@@ -134,3 +140,47 @@ body, html{
 
 
 }
+
+.footdesign{
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa-facebook, .fa-twitter, .fa-instagram{
+    color: white;
+  }
+
+  .foot-link{
+    text-decoration: none;
+
+  }
+
+  .afooter{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+  .ulfooter{
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .subscribe-email{
+    vertical-align: middle;
+  }
