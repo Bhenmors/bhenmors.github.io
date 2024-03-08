@@ -164,6 +164,16 @@ body, html{
     height: 200px;
   }
 
+  .login-links{
+    text-decoration: none;
+    font-weight :500;
+    color: #444444;
+  }
+
+  .login-links:hover{
+    text-decoration: underline;
+  }
+
  @media only screen and (max-width: 1000px) {
     .navcontrol {
         width:100%;
