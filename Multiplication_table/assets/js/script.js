@@ -11,7 +11,7 @@ Multiply.addEventListener('click', function() {
         Quotients = "";
         
         for(var col = 1; col <= ColLimit; col++){
-            Quotients += "<td style='width: 50px;'>"+(row * col)+"</td>";
+            Quotients += "<td>"+(row * col)+"</td>";
             
             
     }
