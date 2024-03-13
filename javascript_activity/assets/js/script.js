@@ -23,7 +23,7 @@ function DrawList() {
     let sum = 0;
 
     for(let x = 0; x < Employee.length; x++)
-        List += "<tr><td>" + Employee[x][0] + " </td> " + "<td>" + Employee[x][1] + "</td>" + "<td>" + Employee[x][2] + "</td>" + "<td><button class='btn btn-danger' onclick='remove("+x+")'>Remove</button></td></tr>";
+        List += "<tr><td style='width: 25%;'>" + Employee[x][0] + " </td> " + "<td style='width: 25%;'>" + Employee[x][1] + "</td>" + "<td style='width: 25%;'>" + Employee[x][2] + "</td>" + "<td style='width: 25%;'><button class='btn btn-danger' onclick='remove("+x+")'>Remove</button></td></tr>";
 
         document.getElementById("table-list").innerHTML = List;
    
