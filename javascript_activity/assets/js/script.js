@@ -23,7 +23,7 @@ function clrTable(){
     var Table = document.getElementById("table-list");
     Employee.length = 0;
     Table.innerHTML = "";
-    
+
 }
 
 function DrawList() {
