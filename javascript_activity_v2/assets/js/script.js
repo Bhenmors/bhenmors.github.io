@@ -23,6 +23,8 @@ function edit(index) {
     document.getElementById("EmployeeId").value = Employee[index][0];
     document.getElementById("EmployeeName").value = Employee[index][1];
     document.getElementById("WorkingHours").value = Employee[index][2];
+    document.getElementById('EmployeeId').readOnly = true;
+    document.getElementById('EmployeeName').readOnly = true;
 
     document.getElementById("btn-update").style.visibility = 'visible';
 
@@ -30,7 +32,8 @@ function edit(index) {
     Employee[index][2] = document.getElementById("WorkingHours").value;
     document.getElementById("btn-update").style.visibility = 'hidden';
     DrawList();
-        
+    document.getElementById('EmployeeId').readOnly = false;
+    document.getElementById('EmployeeName').readOnly = false;
 
 });
     
@@ -50,44 +53,3 @@ function DrawList() {
         document.getElementById("table-list").innerHTML = List;
 }
 
-
-let ArrStudents = ['alexa', 'jaileen', 'diether', 'emman'];
-console.log(ArrStudents);
-
-//sort
-ArrStudents.sort();
-console.log(ArrStudents);
-
-// reverse
-ArrStudents.reverse();
-console.log(ArrStudents);
-//string
-let StringStudents = ArrStudents.join('|');
-console.log(StringStudents);
-
-//Destructuring
-let ArrFoods = ['hamburger', 'hotdog', 'spaghetti', 'chicken', 'sundae', 'fries', 'sprite'];
-// let Burger = ArrFoods[0];
-// let Hotdog = ArrFoods[1];
-// let Spaghetti = ArrFoods[2];
-
-
-let [Burger, Hotdog, ...OtherFoods] = ArrFoods;
-
-let ArrGrades = [89, 95, 94, 50];
-let [Math, Science, PE, Programming] = ArrGrades;
-console.log(PE);
-
-//Value Swap
-let Num1 = 10;
-let Num2 = 5;
-
-console.log(Num1, Num2);
-[Num1, Num2] = [Num2, Num1];
-console.log(Num1, Num2);
-
-//Updating Array
-let ArrSubjects = ['Math', 'Science', 'Programming'];
-console.log(ArrSubjects);
-ArrSubjects[2] = "Web Development";
-console.log(ArrSubjects);
