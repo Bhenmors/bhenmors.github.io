@@ -7,9 +7,9 @@ function arrayInput(num1) {
   if (num1 <= 0) {
     const evenNumbers = arrNums.filter((number) => number % 2 === 0);
     const oddNumbers = arrNums.filter((number) => number % 2 !== 0);
-    console.log(arrNums);
-    console.log("Even Numbers:", evenNumbers);
-    console.log("Odd Numbers:", oddNumbers);
+    console.log(arrNums.join());
+    console.log("Even Numbers:", evenNumbers.join());
+    console.log("Odd Numbers:", oddNumbers.join());
     return;
   }
 
