@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Bhen James Morales</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bhen James Morales</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-3">
+      <section class="row">
+        <div
+          class="container-sm row d-flex justify-content-center gap-5">
+          <div class="col-md-4 d-flex justify-content-center bg-info" style="max-height: 500px;">
+            <div class="p-4 w-100">
+              <h5>Items</h5>
+              <div class="form-group">
+                <input type="text" class="form-control" id="txtIndex" />
+                <label for="">S.K.U #</label>
+                <input
+                  type="tel"
+                  pattern="[0-9\-]+"
+                  class="form-control"
+                  id="txtSKU"
+                  placeholder="Enter SKU #"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Item Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txtitemName"
+                  placeholder="Enter Item Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Item Photo</label>
+                <textarea
+                  class="form-control"
+                  id="photo"
+                  rows="3"
+                  placeholder="Enter Item Photo Link"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="">Item Price</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="txtitemPrice"
+                  placeholder="Enter Item Price"
+                />
+              </div>
+
+              <button class="btn btn-primary mt-3" id="btn-add">Submit</button>
+            </div>
+          </div>
+          <div class="col-md-7 bg-info row p-3" id="displayItems"  style="max-height: 500px; overflow: scroll;"></div>
+        </div>
+
+
+        <div class="container-sm mt-5">
+            <div class="table-responsive bg-info table-responsive overflow-auto" style="max-height: 400px; ">
+                <table class="table table-stripped"  id="myTable">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Photo/th>
+                          <th scope="col">S.K.U. #</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Total Price</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="table-list">
+                     </tbody>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
