@@ -10,5 +10,6 @@ Multiply.addEventListener("click", function () {
   let evenNumbers = array.filter(function (element) {
     return element % 2 === 0;
   });
-  console.log(evenNumbers);
+  document.getElementById("evennum").innerText = evenNumbers;
+  //   console.log(evenNumbers);
 });
