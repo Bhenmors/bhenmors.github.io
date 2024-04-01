@@ -8,6 +8,4 @@ function ChangeColor(color) {
   divBg.classList.remove("bg-light");
   divBg.classList.remove("bg-dark");
   divBg.classList.add(color);
-
-  console.log();
 }
