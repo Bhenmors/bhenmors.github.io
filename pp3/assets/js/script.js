@@ -100,10 +100,10 @@ function DrawTable() {
       "</td>";
     TableBody +=
       `<td>
-                <button class='btn btn-danger btn-sm' onclick='minus(` +
+                <button class='btn btn-danger btn-sm' style='width: 60px;' onclick='minus(` +
       x +
       `);'>Minus</button>
-                <button class='btn btn-warning btn-sm' onclick='plus(` +
+                <button class='btn btn-warning btn-sm' style='width: 60px;' onclick='plus(` +
       x +
       `);'>Add</button>
             </td>`;
