@@ -17,7 +17,12 @@
             <div class="container-fluid top-bg"><a href="#" class="top-links">
                 <div class="container-sm d-flex justify-content-end p-2">
                 <div class="small-center">
-                    <a href="login.html" class="top-links">Log in</a></a>&nbsp;or&nbsp;<a href="signup.html" class="top-links">Create an account</a>&nbsp;|&nbsp;<a href="" class='fas fa-shopping-cart mt-1 cart-style'></a>
+                    <a href="#" class="top-links">Log in</a></a>&nbsp;or&nbsp;<a href="#" class="top-links">
+                      Create an account</a>&nbsp;|&nbsp;
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fas fa-shopping-cart cart-style"></i>
+                      </button>                    
                 </div>
                 </div>
             </div>
@@ -53,6 +58,37 @@
           </div>
         </nav>
     <main>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table table-hover table-striped">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                              <th>Name</th>
+                              <th>Amount</th>
+                              <th>Quantity</th>
+                              <th w-25>Total Price</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tableBody"></tbody>
+                        </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning">Proceed to Checkout</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
         <section class="mt-4">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
