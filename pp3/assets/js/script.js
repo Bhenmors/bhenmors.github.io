@@ -55,7 +55,7 @@ function add(index) {
         while (x < CartItems.length) {
           if (CartItems[x].id == index) {
             Found = true;
-            break; // to stop iteration
+            break;
           }
           x++;
         }
@@ -80,10 +80,12 @@ function add(index) {
 }
 
 function DrawTable() {
+  let sum = 0;
   let TableBody = "<tr>";
   for (let x = 0; x < CartItems.length; x++) {
+    sum += parseInt(CartItems[x].qtys) * parseInt(CartItems[x].Price);
     TableBody += "<tr>";
-    TableBody += "<td>" + (x + 1) + "</td>";
+
     TableBody +=
       "<td><img class='rounded-circle' style='width: 100px; height: 100px;' src='" +
       CartItems[x].photo +
@@ -100,15 +102,19 @@ function DrawTable() {
       "</td>";
     TableBody +=
       `<td>
-                <button class='btn btn-danger btn-sm' style='width: 60px;' onclick='minus(` +
-      x +
-      `);'>Minus</button>
                 <button class='btn btn-warning btn-sm' style='width: 60px;' onclick='plus(` +
       x +
       `);'>Add</button>
+                <button class='btn btn-danger btn-sm' style='width: 60px;' onclick='minus(` +
+      x +
+      `);'>Minus</button>
             </td>`;
     TableBody += "</tr>";
   }
+  TableBody +=
+    "<tr><td></td><td></td><td></td><td></td><td>Total Price :</td><td>" +
+    sum +
+    "</td></tr>";
 
   document.getElementById("tableBody").innerHTML = TableBody;
 }
