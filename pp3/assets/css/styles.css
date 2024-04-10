@@ -207,6 +207,10 @@ html {
   .form-newsletter {
     width: 80%;
   }
+  .cart-photo {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 
 .modal-th-1 {

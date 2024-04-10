@@ -3,30 +3,35 @@
     "name": "Baby Nighties",
     "Price": 600,
     "id": "0",
-    "photo": "https://i.ibb.co/TBKvKzN/Bhen-1.jpg"
+    "photo": "https://i.ibb.co/TBKvKzN/Bhen-1.jpg",
+    "productdetails": "These French terry shorts with pockets are ready for adventure! Easy to pull on with an elastic waistband, your little one will be set for all-day play and comfort. These classic shorts are made for mixing and matching with your favorite Posh Peanut® tops or bodysuits."
   },
   {
     "name": "Baby Boy Casual Daily Wear",
     "Price": 500,
     "id": "1",
-    "photo": "https://i.ibb.co/zbhdDz8/Bhen-2.jpg"
+    "photo": "https://i.ibb.co/zbhdDz8/Bhen-2.jpg",
+    "productdetails": "Boys Embroidered Bear Striped Short Sleeves Cotton Polo Shirt Preppy Style For Summer Kids Clothes"
   },
   {
     "name": "Baby Girl Cute Dress",
     "Price": 450,
     "id": "2",
-    "photo": "https://i.ibb.co/0Q4ycqd/Bhen-3.jpg"
+    "photo": "https://i.ibb.co/0Q4ycqd/Bhen-3.jpg",
+    "productdetails": "Who doesn't love a little ruffle? Our short sleeve ruffle bodysuit dress is made from buttery soft viscose from bamboo for peanut-approved comfort and features easy snap closures for grown-up-approved functionality. Cute for any occasion, this dress can be worn solo or paired with your fave Posh Peanut® bottoms."
   },
   {
     "name": "Baby Boy Onesies Polo",
     "Price": 499,
     "id": "3",
-    "photo": "https://i.ibb.co/jfZ1XD0/Bhen-4.jpg"
+    "photo": "https://i.ibb.co/jfZ1XD0/Bhen-4.jpg",
+    "productdetails": "Ready, set, GO! Hot Wheels™ is back! Get ready to boost your little race car driver's comfort and style with an epic Retro Hot Wheels collection featuring the cars you know and love. Fuel up for all-day play in comfy pajamas, revved-up travel gear, cool swim trunks, and so much more. Everyone can follow their racetrack dreams with styles ranging from size NB to 12Y for little legends and Small to 3XL for you."
   },
   {
     "name": "Baby Girl Striped Sleeveless Dress",
     "Price": 649,
     "id": "4",
-    "photo": "https://i.ibb.co/SXN8rtr/girl-3.jpg"
+    "photo": "https://i.ibb.co/SXN8rtr/girl-3.jpg",
+    "productdetails": "Are you ready for fun? Barbie™ x Posh Peanut have joined forces again, and this collection is bolder- and groovier than ever! Channel your flower power with Barbie and friends, bright rainbows, and iconic pink hearts! Stock your dream closet with cozy PJs and the cutest dresses, tees, and leggings. There's something for every dreamer, with sizes ranging from NB to 12Y and XS to 3XL."
   }
 ]

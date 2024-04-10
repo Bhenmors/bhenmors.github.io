@@ -1,7 +1,5 @@
-// $("#myCarousel").carousel({
-//   interval: 5000,
-// });
 ProductsList();
+let ProductList = [];
 let CartItems = [];
 
 function ProductsList() {
@@ -11,7 +9,6 @@ function ProductsList() {
       if (xhr.status == 200) {
         let divs = "";
         let result = JSON.parse(xhr.responseText);
-
         for (const product in result) {
           let x = result[product].id;
           divs +=
@@ -20,7 +17,10 @@ function ProductsList() {
                       <div class="card collection-container">
                       <img src="${result[product].photo}" class="w-100 container-image" alt="...">
                       <div class="middle">
-                      <div class="text"><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick='add(` +
+                      <div class="text"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProductModal" onclick='view(` +
+            x +
+            `)'>View Product</button></div>
+                      <div class="text"><button type="button" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick='add(` +
             x +
             `)'>Add to cart</button></div>
                       </div>
@@ -31,8 +31,8 @@ function ProductsList() {
                       </div>
               </div>
                         `;
+          ProductList.push(result[x]);
         }
-
         document.querySelector("#div-gallery").innerHTML = divs;
       } else {
         alert("failed to fetch data");
@@ -42,43 +42,53 @@ function ProductsList() {
   xhr.open("GET", "assets/file/products.json", true);
   xhr.send();
 }
+
+//view Product
+function view(index) {
+  let modalbody = "";
+  modalbody += `<div class="container d-flex flex-column flex-lg-row justify-content-between gap-class align-self-stretc p-3">`;
+  modalbody +=
+    '<div class="col-lg-5"> <img src=' +
+    ProductList[index].photo +
+    ' class="w-100 container-image" alt="..."></div>';
+  modalbody +=
+    '<div class="col-lg-6"><div><h4>' +
+    ProductList[index].name +
+    '</h4><img class="w-25" src="assets/img/stars.png">';
+  modalbody += "<h3> ₱" + ProductList[index].Price + "</h3>";
+  modalbody +=
+    `<div class="mt-3"><button type="button" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick='add(` +
+    index +
+    `)'>Add to cart</button></div>`;
+  modalbody +=
+    '</div><div class="mt-3"><h6>Product Details</h6><p>' +
+    ProductList[index].productdetails +
+    "</p></div></div></div>";
+  document.getElementById("modal-view").innerHTML = modalbody;
+}
 // add to cart
 function add(index) {
-  let xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        let result = JSON.parse(xhr.responseText);
-
-        let x = 0;
-        let Found = false;
-        console.log(CartItems);
-        while (x < CartItems.length) {
-          if (CartItems[x].id == index) {
-            Found = true;
-            break;
-          }
-          x++;
-        }
-
-        if (Found) {
-          CartItems[x].qtys = !CartItems[x].qtys
-            ? 1
-            : parseInt(CartItems[x].qtys) + 1;
-        } else {
-          CartItems.push(result[index]);
-          CartItems[CartItems.length - 1].qtys = 1;
-        }
-
-        DrawTable();
-        document.querySelector("#spn-badge").textContent = CartItems.length;
-      } else {
-        alert("failed to fetch data");
-      }
+  let x = 0;
+  let Found = false;
+  while (x < CartItems.length) {
+    if (CartItems[x].id == index) {
+      Found = true;
+      break;
     }
-  };
-  xhr.open("GET", "assets/file/products.json", true);
-  xhr.send();
+    x++;
+  }
+
+  if (Found) {
+    CartItems[x].qtys = !CartItems[x].qtys
+      ? 1
+      : parseInt(CartItems[x].qtys) + 1;
+  } else {
+    CartItems.push(ProductList[index]);
+    CartItems[CartItems.length - 1].qtys = 1;
+  }
+
+  DrawTable();
+  document.querySelector("#spn-badge").textContent = CartItems.length;
 }
 
 function DrawTable() {
@@ -91,7 +101,7 @@ function DrawTable() {
       TableBody += "<tr>";
 
       TableBody +=
-        "<td><img class='rounded-circle' style='width: 100px; height: 100px;' src='" +
+        "<td><img class='rounded-circle cart-photo' style='width: 100px; height: 100px;' src='" +
         CartItems[x].photo +
         "'></td>";
 
