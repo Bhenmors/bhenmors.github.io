@@ -128,6 +128,7 @@ function minus(index) {
   else CartItems.splice(index, 1);
 
   DrawTable();
+  document.querySelector("#spn-badge").textContent = CartItems.length;
 }
 
 function plus(index) {
