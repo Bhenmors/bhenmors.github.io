@@ -16,8 +16,8 @@ function ProductsList() {
           let x = result[product].id;
           divs +=
             ` 
-
-                      <div class="col-lg-3 collection-container">
+            <div class="col-sm-3">
+                      <div class="card collection-container">
                       <img src="${result[product].photo}" class="w-100 container-image" alt="...">
                       <div class="middle">
                       <div class="text"><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick='add(` +
@@ -29,6 +29,7 @@ function ProductsList() {
                           <p>₱${result[product].Price}</p>
                       </div>
                       </div>
+              </div>
                         `;
         }
 
@@ -70,6 +71,7 @@ function add(index) {
         }
 
         DrawTable();
+        document.querySelector("#spn-badge").textContent = CartItems.length;
       } else {
         alert("failed to fetch data");
       }
@@ -93,28 +95,28 @@ function DrawTable() {
 
     TableBody += "<td>" + CartItems[x].name + "</td>";
     TableBody += "<td>" + CartItems[x].Price + "</td>";
-    TableBody += "<td>" + CartItems[x].qtys + "</td>";
+    TableBody +=
+      "<td><button class='qty-button' onclick='minus(" +
+      x +
+      ");'>-</button>" +
+      " " +
+      CartItems[x].qtys +
+      " " +
+      "<button class='qty-button' onclick='plus(" +
+      x +
+      ");'>+</button></td>";
     TableBody +=
       "<td>" +
       (parseFloat(CartItems[x].qtys) * parseFloat(CartItems[x].Price)).toFixed(
         2
       ) +
       "</td>";
-    TableBody +=
-      `<td>
-                <button class='btn btn-warning btn-sm' style='width: 60px;' onclick='plus(` +
-      x +
-      `);'>Add</button>
-                <button class='btn btn-danger btn-sm' style='width: 60px;' onclick='minus(` +
-      x +
-      `);'>Minus</button>
-            </td>`;
     TableBody += "</tr>";
   }
   TableBody +=
-    "<tr><td></td><td></td><td></td><td></td><td>Total Price :</td><td>" +
+    "<tr><td></td><td></td><td></td><td>Total Price :</td><td><b>" +
     sum +
-    "</td></tr>";
+    "</b></td></tr>";
 
   document.getElementById("tableBody").innerHTML = TableBody;
 }

@@ -1,12 +1,12 @@
 [
   {
-    "name": "Baby Boy Dinosaur Print Bow Front",
+    "name": "Baby Nighties",
     "Price": 600,
     "id": "0",
     "photo": "https://i.ibb.co/TBKvKzN/Bhen-1.jpg"
   },
   {
-    "name": "SHEIN Baby Boy Casual Daily Wear",
+    "name": "Baby Boy Casual Daily Wear",
     "Price": 500,
     "id": "1",
     "photo": "https://i.ibb.co/zbhdDz8/Bhen-2.jpg"
@@ -18,9 +18,15 @@
     "photo": "https://i.ibb.co/0Q4ycqd/Bhen-3.jpg"
   },
   {
-    "name": "Baby Girl Striped Sleeveless Dress",
+    "name": "Baby Boy Onesies Polo",
     "Price": 499,
     "id": "3",
     "photo": "https://i.ibb.co/jfZ1XD0/Bhen-4.jpg"
+  },
+  {
+    "name": "Baby Girl Striped Sleeveless Dress",
+    "Price": 649,
+    "id": "4",
+    "photo": "https://i.ibb.co/SXN8rtr/girl-3.jpg"
   }
 ]

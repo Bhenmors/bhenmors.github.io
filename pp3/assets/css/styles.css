@@ -224,3 +224,22 @@ html {
 .modal-th-4 {
   width: 20%;
 }
+
+.qty-button {
+  background-color: #0275d8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  width: 20px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.qty-button button:hover {
+  background-color: #ffffff;
+}
+
+.card {
+  border: none !important;
+}

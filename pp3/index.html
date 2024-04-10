@@ -20,9 +20,18 @@
                     <a href="#" class="top-links">Log in</a></a>&nbsp;or&nbsp;<a href="#" class="top-links">
                       Create an account</a>&nbsp;|&nbsp;
                       <!-- Button trigger modal -->
-                      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <!-- <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <i class="fas fa-shopping-cart cart-style"></i>
-                      </button>                    
+
+                      </button>                     -->
+                      <button type="button" id="btn-show-favorites" class="btn position-relative"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal"
+                      >
+                      <i class="fas fa-shopping-cart cart-style"></i>
+                        <span id="spn-badge" class="position-absolute mt-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          0
+                        </span>
+                      </button>
                 </div>
                 </div>
             </div>
@@ -67,15 +76,14 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body table-responsive">
-                        <table class="table table-hover table-striped">
+                        <table class="table table-striped">
                           <thead>
                             <tr>
                               <th class="modal-th-2"></th>
                               <th class="modal-th-4">Product</th>
                               <th class="modal-th-3">Amount</th>
-                              <th class="modal-th-3">Quantity</th>
+                              <th class="modal-th-4">Quantity</th>
                               <th class="modal-th-4">Price</th>
-                              <th class="modal-th-3">Action</th>
                             </tr>
                           </thead>
                           <tbody id="tableBody"></tbody>
@@ -98,24 +106,12 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src="assets/img/slides-1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block slides-caption-bg">
-                        <h5 class="text-greyblack">Stylish</h5>
-                        <p class="text-greyblack">Onesies and Outfits for Babies</p>
-                    </div>
                   </div>
                   <div class="carousel-item">
                     <img src="assets/img/slides-2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block slides-caption-bg">
-                      <h5 class="text-greyblack">Stylish</h5>
-                      <p class="text-greyblack">Onesies and Outfits for Babies</p>
-                    </div>
                   </div>
                   <div class="carousel-item">
                     <img src="assets/img/slides-3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block slides-caption-bg">
-                        <h5 class="text-greyblack">Stylish</h5>
-                        <p class="text-greyblack">Onesies and Outfits for Babies</p>
-                    </div>
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -170,9 +166,12 @@
             <div class="d-flex justify-content-center flex-column align-items-center mt-4">
                 <h4>Featured</h4>
             </div>
-            <div class="container-sm d-flex flex-column flex-lg-row justify-content-around gap-class align-self-stretc p-3" id="div-gallery">
+            <div class="container-sm">
+              <div class="row" id="div-gallery">
 
-            </div>
+              </div>
+              
+            </div>  
         </section>
         <section>
             <div class="container-sm newsletter-border mt-5 mb-4">
