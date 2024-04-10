@@ -1,6 +1,7 @@
 ProductsList();
 let ProductList = [];
 let CartItems = [];
+let suggestions = [];
 
 function ProductsList() {
   let xhr = new XMLHttpRequest();
@@ -32,6 +33,7 @@ function ProductsList() {
               </div>
                         `;
           ProductList.push(result[x]);
+          suggestions.push(result[product].name);
         }
         document.querySelector("#div-gallery").innerHTML = divs;
       } else {
@@ -149,4 +151,40 @@ function minus(index) {
 function plus(index) {
   CartItems[index].qtys = parseInt(CartItems[index].qtys) + 1;
   DrawTable();
+}
+
+document.querySelector("#txt-search").addEventListener("keyup", function () {
+  const searchInput = document.querySelector(".searchInput");
+  let userData = this.value; //user enetered data
+  let emptyArray = [];
+  if (userData) {
+    emptyArray = suggestions.filter((data) => {
+      //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+      return data.toLocaleLowerCase().includes(userData.toLocaleLowerCase());
+    });
+    emptyArray = emptyArray.map((data) => {
+      // passing return data inside li tag
+      return (data = "<li>" + data + "</li>");
+    });
+    searchInput.classList.add("active"); //show autocomplete box
+    showSuggestions(emptyArray);
+    let allList = resultBox.querySelectorAll("li");
+    for (let i = 0; i < allList.length; i++) {
+      //adding onclick attribute in all li tag
+      allList[i].setAttribute("onclick", "select(this)");
+    }
+  } else {
+    searchInput.classList.remove("active"); //hide autocomplete box
+  }
+});
+
+function showSuggestions(list) {
+  let listData;
+  if (!list.length) {
+    userValue = inputBox.value;
+    listData = "<li>" + userValue + "</li>";
+  } else {
+    listData = list.join("");
+  }
+  document.getElementById("resultBox").innerHTML = listData;
 }

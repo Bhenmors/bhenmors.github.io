@@ -50,7 +50,14 @@
                     <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="#">ABOUT US</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" aria-current="page" href="#">CONTACT US</a></li>
                 </ul> 
-                    <input type="text" class="form-inline noborder p-2" placeholder="Search store">
+
+                    <div class="searchInput">
+                      <input type="text" id="txt-search" placeholder="Search Store">
+                      <div class="resultBox" id="resultBox">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+
                     <div class="input-group-append navrightborder p-2">
                     <button class="btn btn-secondary" type="button">
                     <i class="fa fa-search"></i>
