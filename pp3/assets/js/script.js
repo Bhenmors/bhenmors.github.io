@@ -82,43 +82,48 @@ function add(index) {
 }
 
 function DrawTable() {
-  let sum = 0;
-  let TableBody = "<tr>";
-  for (let x = 0; x < CartItems.length; x++) {
-    sum += parseInt(CartItems[x].qtys) * parseInt(CartItems[x].Price);
-    TableBody += "<tr>";
+  if (CartItems.length > 0) {
+    let sum = 0;
+    let TableBody =
+      "<table class='table table-striped'><thead><tr><th class='modal-th-2'></th><th class='modal-th-4'>Product</th><th class='modal-th-3'>Amount</th><th class='modal-th-4'>Quantity</th><th class='modal-th-4'>Price</th></tr></thead><tbody>";
+    for (let x = 0; x < CartItems.length; x++) {
+      sum += parseInt(CartItems[x].qtys) * parseInt(CartItems[x].Price);
+      TableBody += "<tr>";
 
-    TableBody +=
-      "<td><img class='rounded-circle' style='width: 100px; height: 100px;' src='" +
-      CartItems[x].photo +
-      "'></td>";
+      TableBody +=
+        "<td><img class='rounded-circle' style='width: 100px; height: 100px;' src='" +
+        CartItems[x].photo +
+        "'></td>";
 
-    TableBody += "<td>" + CartItems[x].name + "</td>";
-    TableBody += "<td>" + CartItems[x].Price + "</td>";
+      TableBody += "<td>" + CartItems[x].name + "</td>";
+      TableBody += "<td>" + CartItems[x].Price + "</td>";
+      TableBody +=
+        "<td><button class='qty-button' onclick='minus(" +
+        x +
+        ");'>-</button>" +
+        " " +
+        CartItems[x].qtys +
+        " " +
+        "<button class='qty-button' onclick='plus(" +
+        x +
+        ");'>+</button></td>";
+      TableBody +=
+        "<td>" +
+        (
+          parseFloat(CartItems[x].qtys) * parseFloat(CartItems[x].Price)
+        ).toFixed(2) +
+        "</td>";
+      TableBody += "</tr>";
+    }
     TableBody +=
-      "<td><button class='qty-button' onclick='minus(" +
-      x +
-      ");'>-</button>" +
-      " " +
-      CartItems[x].qtys +
-      " " +
-      "<button class='qty-button' onclick='plus(" +
-      x +
-      ");'>+</button></td>";
-    TableBody +=
-      "<td>" +
-      (parseFloat(CartItems[x].qtys) * parseFloat(CartItems[x].Price)).toFixed(
-        2
-      ) +
-      "</td>";
-    TableBody += "</tr>";
-  }
-  TableBody +=
-    "<tr><td></td><td></td><td></td><td>Total Price :</td><td><b>" +
-    sum +
-    "</b></td></tr>";
+      "<tr><td></td><td></td><td></td><td>Total Price :</td><td><b>" +
+      sum +
+      "</b></td></tr></tbody></table>";
 
-  document.getElementById("tableBody").innerHTML = TableBody;
+    document.getElementById("modal-contents").innerHTML = TableBody;
+  } else
+    document.getElementById("modal-contents").innerHTML =
+      "<h4 class='text-center'>Your Cart is Empty</h4>";
 }
 
 function minus(index) {
