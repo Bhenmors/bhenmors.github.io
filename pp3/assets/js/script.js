@@ -2,7 +2,10 @@ ProductsList();
 let ProductList = [];
 let CartItems = [];
 let suggestions = [];
+const searchInput = document.querySelector(".searchInput");
+const resultBox = searchInput.querySelector(".resultBox");
 
+// Draw cards for products
 function ProductsList() {
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -46,6 +49,7 @@ function ProductsList() {
 }
 
 //view Product
+
 function view(index) {
   let modalbody = "";
   modalbody += `<div class="container d-flex flex-column flex-lg-row justify-content-between gap-class align-self-stretc p-3">`;
@@ -69,6 +73,7 @@ function view(index) {
   document.getElementById("modal-view").innerHTML = modalbody;
 }
 // add to cart
+
 function add(index) {
   let x = 0;
   let Found = false;
@@ -92,6 +97,8 @@ function add(index) {
   DrawTable();
   document.querySelector("#spn-badge").textContent = CartItems.length;
 }
+
+//cart draw table contents
 
 function DrawTable() {
   if (CartItems.length > 0) {
@@ -138,6 +145,8 @@ function DrawTable() {
       "<h4 class='text-center'>Your Cart is Empty</h4>";
 }
 
+//cart qty selector
+
 function minus(index) {
   let Qtys = CartItems[index].qtys;
 
@@ -153,8 +162,9 @@ function plus(index) {
   DrawTable();
 }
 
+//search bar suggestion
+
 document.querySelector("#txt-search").addEventListener("keyup", function () {
-  const searchInput = document.querySelector(".searchInput");
   let userData = this.value; //user enetered data
   let emptyArray = [];
   if (userData) {
@@ -171,7 +181,8 @@ document.querySelector("#txt-search").addEventListener("keyup", function () {
     let allList = resultBox.querySelectorAll("li");
     for (let i = 0; i < allList.length; i++) {
       //adding onclick attribute in all li tag
-      allList[i].setAttribute("onclick", "select(this)");
+      allList[i].classList.add("list" + i);
+      allList[i].setAttribute("onclick", "selection(" + i + ")");
     }
   } else {
     searchInput.classList.remove("active"); //hide autocomplete box
@@ -187,4 +198,11 @@ function showSuggestions(list) {
     listData = list.join("");
   }
   document.getElementById("resultBox").innerHTML = listData;
+}
+
+function selection(num) {
+  document.getElementById("txt-search").value = document.querySelector(
+    ".list" + num
+  ).innerHTML;
+  searchInput.classList.remove("active");
 }
