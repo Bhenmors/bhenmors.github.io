@@ -115,7 +115,7 @@ function DrawTable() {
         "'></td>";
 
       TableBody += "<td>" + CartItems[x].name + "</td>";
-      TableBody += "<td>" + CartItems[x].Price + "</td>";
+      TableBody += "<td>₱" + CartItems[x].Price + "</td>";
       TableBody +=
         "<td><button class='qty-button' onclick='minus(" +
         x +
@@ -127,7 +127,7 @@ function DrawTable() {
         x +
         ");'>+</button></td>";
       TableBody +=
-        "<td>" +
+        "<td>₱" +
         (
           parseFloat(CartItems[x].qtys) * parseFloat(CartItems[x].Price)
         ).toFixed(2) +
@@ -135,7 +135,7 @@ function DrawTable() {
       TableBody += "</tr>";
     }
     TableBody +=
-      "<tr><td></td><td></td><td></td><td>Total Price :</td><td><b>" +
+      "<tr><td></td><td></td><td></td><td>Total Price :</td><td><b>₱" +
       sum +
       "</b></td></tr></tbody></table>";
 
